@@ -17,7 +17,7 @@ if time_bound == "yes":
 else:
     reminder += " Consider completing it when you have free time."
 
-print(f"\nReminder: {reminder}")
+print(f"Reminder: {reminder}")
 
 print("\nDon't forget your task! Here’s a quick reminder loop:")
 for i in range(2):
