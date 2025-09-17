@@ -18,7 +18,3 @@ else:
     reminder += " Consider completing it when you have free time."
 
 print(f"Reminder: {reminder}")
-
-print("\nDon't forget your task! Here’s a quick reminder loop:")
-for i in range(2):
-    print(f"{i+1}. {reminder}")
