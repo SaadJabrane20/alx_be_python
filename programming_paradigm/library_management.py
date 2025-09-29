@@ -21,17 +21,17 @@ class Book:
 
 class Library:
     def __init__(self):
-        self.__books = []
+        self._books = []
 
     def add_book(self, book):
         if isinstance(book, Book):
-            self.__books.append(book)
+            self._books.append(book)
             print(f"Book '{book.title}' by {book.author} added to the library.")
         else:
             print("Error: Only Book instances can be added.")
     
     def check_out_book(self, title):
-        for book in self.__books:
+        for book in self._books:
             if book.title.lower() == title.lower():
                 if book.check_out():
                     print(f"'{book.title}' has been checked out")
@@ -41,7 +41,7 @@ class Library:
         print(f"NO book found with title {title}")
 
     def return_book(self,title):
-        for book in self.__books:
+        for book in self._books:
             if book.title.lower() == title.lower():
                 if book.return_book():
                     print(f"'{title}' has been returned.")
@@ -51,7 +51,7 @@ class Library:
         print(f"No book found with the title '{title}'. ")
 
     def list_available_books(self):
-        available_books = [book for book in self.__books if book.is_available()]
+        available_books = [book for book in self._books if book.is_available()]
         if not available_books:
             print("No books are currently available.")
         else:
