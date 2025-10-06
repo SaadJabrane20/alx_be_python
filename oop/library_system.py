@@ -23,14 +23,6 @@ class Library:
 
     def add_book(self, book):
         self.books.append(book)
-        if isinstance(book, Book):
-            print(f"added: {book}")
-        else:
-            print("Only Book, EBook, or PrintBook instances can be added.")
     def list_books(self):
-        if not self.books:
-            print("The library is empty.")
-        else:
-            print("\nLibrary Collection:")
-            for book in self.books:
-                print(book)
+        for book in self.books:
+            print(book)
